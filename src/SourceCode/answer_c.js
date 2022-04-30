@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { useState } from 'react'
-const size = 3
+const checkboxes = [0, 1, 2]
+const size = checkboxes.length
 
 const Checkbox = ({ index, value, setValue }) => {
   return (
@@ -31,7 +32,7 @@ const BigForm = () => {
 
   return (
     <div className='form'>
-      <span>checkboxes boxes: [{checkboxes.map((item) => !!item).join(',')}]</span>
+      <span>Checked boxes: [{checkboxes.map((item) => !!item).join(',')}]</span>
       <div className='checkbox-wrapper'>
         {checkboxes.map((item, index) => {
           return (
